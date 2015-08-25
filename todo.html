@@ -2,9 +2,9 @@
 		<div id="main">
 			<div ng-controller="TodoCtrl" class="well form-area">
 				<h2 class="text-center">THINGS TO DO</h2>
-				<div class="form-group">
+				<form ng-submit="submit()" class="form-group">
 					<input type="text" class="form-control" ng-model="todo.title" autofocus>
-				</div>
+				</form>
 				<ul>
 					<h4><li ng-repeat="todo in todos">{{todo.title}}
 						<span class="date-span"> - Added on: {{created_at | date: 'EEEE MMM dd, yyyy'}} </span>

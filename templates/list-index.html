@@ -1,0 +1,10 @@
+<ul>
+  <li ng-repeat="list in lists">
+    {{list.title}}
+    <ul>
+      <li ng-repeat="todo in list.todos">
+        {{todo.title}}
+      </li>
+    </ul>
+  </li>
+</ul>
