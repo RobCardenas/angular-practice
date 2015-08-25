@@ -11,7 +11,9 @@ ul {
   padding-left: 0; }
 
 li {
-  list-style: none; }
+  list-style: none;
+  margin-bottom: 20px;
+  line-height: 30px; }
 
 .btn-danger {
   background-color: #ff0000;

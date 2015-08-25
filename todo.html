@@ -1,0 +1,24 @@
+<div class="container">
+		<div id="main">
+			<div ng-controller="TodoCtrl" class="well form-area">
+				<h2 class="text-center">THINGS TO DO</h2>
+				<div class="form-group">
+					<input type="text" class="form-control" ng-model="todo.title"/>
+				</div>
+				<ul>
+					<h4><li ng-repeat="todo in todos">{{todo.title}}
+						<span class="date-span">- {{created_at | date: 'EEEE MMM dd, yyyy'}} </span>
+						<button class="btn btn-danger pull-right" ng-click="delete(todo)">Delete</button><hr>
+					</li></h4>
+					
+				</ul>
+				<button class="btn btn-success" style="display: block; width: 100%;" ng-click="addTodo()">Add Todo</button>
+				
+				<h4 ng-pluralize count="todos.length"
+				              when="{'0': 'Nothing to do here. Get to gettin\'.',
+				                     'one': 'You have 1 thing to do.',
+				                     'other': 'You have {} things to do.'}">
+				</h3>
+			</div>
+		</div>
+	</div>
