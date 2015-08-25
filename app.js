@@ -1,4 +1,15 @@
-angular.module('starter', [])
+angular.module("starter", ["ngRoute"])
+  .config(['$routeProvider',
+   function($routeProvider) {
+     $routeProvider.
+       when('/', {
+         templateUrl: 'templates/todos.html',
+         controller: 'TodoCtrl'
+       }).
+       otherwise({
+         redirectTo: '/'
+       });
+   }])  
   .controller("MainCtrl", ['$scope', '$rootScope', function ($scope, $rootScope) {
     $scope.term = "cellar door"
     $scope.showAlert = function() {
